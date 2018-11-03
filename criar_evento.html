@@ -40,7 +40,7 @@
                 Nome do evento: <input type="text" placeholder="Corrida matinal..."> <br><br>
                 Qual a categoria do evento?
                 <select name="categoria"> 
-                    <option value="estado">Categoria:</option> 
+                    <option value="categoria">Categoria:</option> 
                     <option value="ac">Corrida</option> 
                     <option value="al">Volei</option> 
                     <option value="am">Futebol</option> 
@@ -67,6 +67,7 @@
 
 
     <script>
+        let input = document.querySelector("input.form");
         let botao = document.querySelector(".enviar");
         let form = document.querySelector(".formulario");
         botao.addEventListener("click", function(event){
@@ -74,8 +75,11 @@
             let novo_p = document.createElement("p");
             let texto_p = document.createTextNode("Evento marcado com sucesso!");
 
-            novo_p.appendChild(texto_p);
-            form.appendChild(novo_p);
+            if (form.childNodes.length<=3){
+                novo_p.appendChild(texto_p);
+                form.appendChild(novo_p);
+            };
+            
         })
     </script>
 </body>
