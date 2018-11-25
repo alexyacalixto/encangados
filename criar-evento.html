@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="marca.png" sizes="20x20" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <title>Encangados - Crie seu evento!</title>
+    
+</head>
+<body>
+    <input type="checkbox" id="check">
+        <label class="icone" for="check">
+            <img src="perfil4.png" width="30px" height="30px">
+        </label>
+    
+        <nav class="menu">
+            <ul>
+                <img src="perfil3.png" class="img-perfil"><br>
+                <span class="nome-perfil">Alexya Calixto</span><br><br><br>
+                <li>
+                    <a href="minha-conta.html" >
+                        <div class="titulo-menu">
+                            <img src="perfil4.png" height="15px" width="15px">Minha Conta
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="meus-eventos.html" >
+                        <div class="titulo-menu">
+                            <img src="calendar2.png" height="15px" width="15px">Meus Eventos
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="config.html" >
+                        <div class="titulo-menu">
+                            <img src="config.png" height="15px" width="15px">Configurações
+                        </div>
+                    </a>
+                </li><br><br>
+                <span class="sair">
+                    <a href="index.html">
+                        <img src="sair.png" alt="">
+                    </a>
+                </span>
+            </ul>
+            
+        </nav>
+
+        <nav class="navegador-superior">
+            <a href="pagina-inicial.html"><img src="marca.png" height="50px" width="50px"></a>
+            <div class="opcao"><a href="categorias.html">Categorias</a></div>
+            <div class="opcao"><a href="ranking.html">Ranking</a></div>
+            <div class="opcao"><a href="sobre.html">Sobre Nós</a></div>
+            <div class="opcao"><a href="contato.html">Contato</a></div>
+        </nav>
+        <div class="evento">
+            <span>Crie seu evento</span>
+
+            <form action="">
+                Nome do evento:<br>
+                <input type="text" id="txtBusca2" placeholder="Digite o nome do evento..."><br>
+                Categoria:<br><select name="categoria" id="seletorCategorias">
+                    <option value="">-------</option>
+                    <option value="">Ciclismo</option>
+                    <option value="">Corrida</option>
+                    <option value="">Dança</option>
+                    <option value="">Futebol</option>
+                    <option value="">Futsal</option>
+                    <option value="">Natação</option>
+                    <option value="">Tênis de mesa</option>
+                    <option value="">Trilha</option>
+                    <option value="">Vôlei</option>
+                    <option value="">Yoga</option>
+                    <option value="">Outro</option>
+                </select><br>
+                Data:<input type="date" name="data" id="dataForm"><br>
+                Horário:
+                <input type="number" name="horas" min="00" max="23" id="horario">
+                <input type="number" name="minutos" min="00" max="59" id="horario"><br>
+                Equipamentos/vestuário específico (opcional):<br>
+                <input type="text" id="txtBusca2" placeholder="Digite algum equipamento necessário..."><br>
+                Local:<br>
+                <input type="text" id="txtBusca2" placeholder="Digite o local do evento..."><br><br>
+                <button class="btnBusca">Criar</button>
+            </form>
+        </div>
+
+        <div class="rodape">
+            <div class="redes">
+                <a href="http://www.facebook.com"><img src="facebook.png" class="icon"></a>
+                <a href="https://twitter.com"><img src="twitter.png" class="icon"></a>
+                <a href="https://www.instagram.com"><img src="instagram.png" class="icon"></a>
+            </div>
+            <p>Copyright © 2018 | Encangados</p>
+        </div>
+
+</body>
+</html>

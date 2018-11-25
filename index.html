@@ -4,123 +4,337 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Encangados</title>
-    <link rel="stylesheet" href="encangados.css">
+    <link rel="icon" href="marca.png" sizes="20x20" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <title>Encangados - Crie seu evento!</title>
+    
 </head>
 <body>
-    <div class="menu-superior">
-        <li><a href="">Categorias</a></li>
-        <li><a href="">Ranking</a></li>
-        <li><a href="./sobre_nos.html">Sobre nós</a></li>
-        <li><a href="">Contato</a></li>
-        <img src="./logo.png" class="img-logo">
-        
-    </div>
-    <div class="menu-lateral">
-        <img src="./logo.png" class="img-logo"><br>
-        <img class= "img-perfil" src="./imgperfil.PNG"> <br>
-        <span class="nome-perfil">Alexya Calixto</span><br>
-        <img src="./estrelas.png" class="img-estrelas"><br>
-        <br>
-        <ul>
-            <li><a href="">Minha conta</a></li>
-            <li><a href="">Meus eventos</a></li>
-            <li><a href="./criar_evento.html">Criar evento</a></li>
-            <li><a href="">Configurações</a></li>            
-        </ul>
-        <span class="sair"><a href="">Sair</a></span>
-    </div>
-
-
-
+    <input type="checkbox" id="check">
+        <label class="icone" for="check">
+            <img src="entrar.png" width="40px" height="30px">
+        </label>
     
-
-    <div class="conteudo">
-            <div class="slideshow">
-                    <img class="active" src="" alt="">
-                    <img src="./img/img1.jpg" alt="">
-                    <img src="./img/pantera.png" alt="">
-                    <span class="seta esquerda"> &lt; </span>
-                    <span class="seta direita"> &gt; </span>
-                    <div class="bolinhas-overlay">
-                        <div class="bolinha active"></div>
-                        <div class="bolinha"></div>
-                        <div class="bolinha"></div>
-                    </div>
-                </div>
-        <h1 class="pesquisa">Pesquise por uma atividade física:</h1>
-        <br>
-        <div id="divBusca">
-            <img src="buscar.png" alt="Buscar..."/>
-            <input type="text" id="txtBusca" placeholder="Buscar..."/>
-            <button id="btnBusca">Buscar</button>
-        </div>
-        <h1 class="pesquisa">Categorias mais procuradas:</h1>
-        <div class="categorias">
-            <div class="categoria-individual">
-                <span class="nome-categoria">Corrida</span>
-            </div>
-            <div class="categoria-individual">
-                    <span class="nome-categoria">Futsal</span>
-            </div>
-            <div class="categoria-individual">
-                    <span class="nome-categoria">Ciclismo</span>
-            </div>
-            <div class="categoria-individual">
-                    <span class="nome-categoria">Vôlei</span>
-            </div>
-            <div class="categoria-individual">
-                    <span class="nome-categoria">Trilha</span>
-            </div>
-            <div class="categoria-individual">
-                    <span class="nome-categoria">Dança</span>
-            </div>
+        <nav class="menu" style="height: 330px;">
+            <br><br><br><br><br>
+            <span class="ou">Já tem conta? Faça o login!</span>
+            <div class="op-login botaologin">Login</div>
+            <br> <span class="ou">Não tem conta? Junte-se a nós!</span>
+            <div class="op-login botaocadastro">Cadastro</div>
             
-              
-                
-        </div>
-    </div>
+                 
+        </nav>
 
-    <script>
-        let imgs = document.querySelectorAll(".slideshow img");
-        let bolinhas = document.querySelectorAll(".slideshow .bolinhas-overlay .bolinha");
-        let seta_esquerda = document.querySelector(".slideshow .seta.esquerda");
-        let seta_direita = document.querySelector(".slideshow .seta.direita");
-        let slide_atual = 0;
-        function proximoSlide(){
-            imgs[slide_atual].classList.remove("active");
-            bolinhas[slide_atual].classList.remove("active");
-            slide_atual++;
-            if(slide_atual>=imgs.length){
-                slide_atual = 0;
-            }
-            imgs[slide_atual].classList.add("active");
-            bolinhas[slide_atual].classList.add("active");
-        }
-        function voltarSlide(){
-            imgs[slide_atual].classList.remove("active");
-            bolinhas[slide_atual].classList.remove("active");
-            slide_atual--;
-            if(slide_atual < 0){
-                slide_atual = imgs.length-1;
-            }
-            imgs[slide_atual].classList.add("active");            
-            bolinhas[slide_atual].classList.add("active");
-        }
-        function irParaSlide(indice){
-            imgs[slide_atual].classList.remove("active");
-            bolinhas[slide_atual].classList.remove("active");
-            slide_atual = indice;
-            imgs[slide_atual].classList.add("active");            
-            bolinhas[slide_atual].classList.add("active");
-        }
-        seta_direita.addEventListener("click", proximoSlide);
-        seta_esquerda.addEventListener("click", voltarSlide);
-        for(let i=0; i<bolinhas.length; i++){
-            bolinhas[i].addEventListener("click", function(){
-                irParaSlide(i);
+        <nav class="navegador-superior">
+            <a href="index.html"><img src="marca.png" height="50px" width="50px"></a>
+            <div class="opcao"><a href="categorias2.html">Categorias</a></div>
+            <div class="opcao"><a href="ranking2.html">Ranking</a></div>
+            <div class="opcao"><a href="sobre2.html">Sobre Nós</a></div>
+            <div class="opcao"><a href="contato2.html">Contato</a></div>
+        </nav>
+
+        <div class="banner">
+            <div class="text-banner">
+                <p>Exercitando o corpo juntos<br>
+                e melhorando a saúde.</p>
+            </div>
+            <!--<div class="text-banner2">
+                    <a href="#participar2" class="scrollSuave">Participe ou crie seu evento em Quixadá</a>
+            </div>-->
+            <img src="corrida.jpg">
+        </div>
+
+        <div class="pesquisar">
+            <div class="fundo-pesquisa">
+                <span style="color: white;">Pesquise por uma atividade física:</span><br>
+                <div class="barraBusca">
+                        <input type="text" id="txtBusca" placeholder="Buscar...">
+                        <button class="btnBusca">Pesquisar</button>
+                </div>
+            </div>
+            <span class="mais-pesquisadas">Atividades mais pesquisadas:</span><br>
+            <div class="categorias">
+                <a href="corrida.html"><div class="circulo">
+                    <img src="corrida2.jpg"><span class="text-categoria">Corrida</span> 
+                </div></a>
+                <a href="futsal.html"><div class="circulo">
+                    <img src="futsal.jpg"><span class="text-categoria">Futsal</span>
+                </div></a>
+                <a href="volei.html"><div class="circulo">
+                    <img src="volei.jpg"><span class="text-categoria">Vôlei</span>
+                </div></a>
+                <a href="danca.html"><div class="circulo">
+                    <img src="danca.jpg"><span class="text-categoria">Dança</span>
+                </div></a>
+                <a href="trilha.html"><div class="circulo">
+                    <img src="trilha.jpg"><span class="text-categoria">Trilha</span>
+                </div></a>
+                <a href="bike.html"><div class="circulo">
+                    <img src="bike.jpg"><span class="text-categoria">Ciclismo</span>
+                </div></a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="b3 bloco">
+                <img src="correr.png" height="100px" width="100px"><br>
+                <p>Participe de vários eventos no município de Quixadá. Conheça novas pessoas, ou chame seus amigos.</p>
+            </div>
+            <div class="b2 bloco">
+                <img src="calendar.png" height="100px" width="100px"><br>
+                <p>Crie seus próprios eventos em Quixadá e convide todo mundo. Vamos praticar atividades físicas!</p>
+            </div>
+            <div class="b1 bloco">
+                <img src="ranking.png" height="100px" width="100px"><br>
+                <p>Quanto melhor o evento, melhor a avaliação dos participantes, e você ganha mais pontos. Os melhores organizadores e eventos ficarão no topo do nosso ranking.</p>
+            </div>
+        </div>
+
+        <div class="rodape">
+            <div class="redes">
+                <a href="http://www.facebook.com"><img src="facebook.png" class="icon"></a>
+                <a href="https://twitter.com"><img src="twitter.png" class="icon"></a>
+                <a href="https://www.instagram.com"><img src="instagram.png" class="icon"></a>
+            </div>
+            <p>Copyright © 2018 | Encangados</p>
+        </div>
+
+
+
+
+
+        <script>
+            var $doc = $('html, body');
+            $('.scrollSuave').click(function() {
+                $doc.animate({
+                    scrollTop: $( $.attr(this, 'href') ).offset().top
+                }, 500);
+                return false;
             });
-        }
-    </script>
+
+            let botaologin= document.querySelector(".botaologin");
+            let botaocadastro = document.querySelector(".botaocadastro");
+            let menu = document.querySelector(".menu")
+        
+           
+
+            function add_login(){
+                let email= document.createElement("span");
+                let txtEmail= document.createTextNode("Email:");
+                email.appendChild(txtEmail);
+
+                let senha= document.createElement("span");
+                let txtSenha= document.createTextNode("Senha:");
+                senha.appendChild(txtSenha);
+
+                let inputtxt= document.createElement("input");
+                inputtxt.type = "text";
+                inputtxt.id="cdtLogin";
+                inputtxt.placeholder="Digite seu email..."
+
+                email.appendChild(inputtxt);
+
+                let inputsenha= document.createElement("input");
+                inputsenha.type = "password";
+                inputsenha.id="cdtLogin";
+                inputsenha.placeholder="Digite sua senha..."
+
+                senha.appendChild(inputsenha);
+
+                let titulo = document.createElement("span");
+                titulo.classList.add("titulo-login");
+                let txtTitulo = document.createTextNode("Login");
+                titulo.appendChild(txtTitulo); 
+
+               
+                let login = document.createElement("div");
+                login.classList.add("login");
+
+                let buttonLogin = document.createElement("div");
+                buttonLogin.classList.add("buttonLogin");
+
+                let link = document.createElement("a");
+                link.href= "./pagina-inicial.html";
+
+                let txtLink = document.createTextNode("Entrar");
+                link.appendChild(txtLink);
+
+                buttonLogin.appendChild(link);
+
+                login.appendChild(titulo);
+                login.appendChild(email);
+                login.appendChild(senha);
+                login.appendChild(buttonLogin);
+                menu.appendChild(login);
+
+                let buttonVoltar = document.createElement("div");
+                buttonVoltar.classList.add("buttonVoltar");
+                let buttonVoltartxt = document.createTextNode("Voltar");
+                buttonVoltar.appendChild(buttonVoltartxt);
+                buttonVoltar.addEventListener("click", function(){
+                    voltar();
+                })
+                
+                login.appendChild(buttonVoltar);
+
+            }
+
+
+            function add_cadastro(){
+                let email= document.createElement("span");
+                let txtEmail= document.createTextNode("Email:");
+                email.appendChild(txtEmail);
+
+                let senha= document.createElement("span");
+                let txtSenha= document.createTextNode("Senha:");
+                senha.appendChild(txtSenha);
+
+                let inputtxt= document.createElement("input");
+                inputtxt.type = "text";
+                inputtxt.id="cdtLogin";
+                inputtxt.placeholder="Digite seu email..."
+
+                email.appendChild(inputtxt);
+
+                let inputsenha= document.createElement("input");
+                inputsenha.type = "password";
+                inputsenha.id="cdtLogin";
+                inputsenha.placeholder="Digite sua senha..."
+
+                senha.appendChild(inputsenha);
+
+
+                let nome= document.createElement("span");
+                let txtnome= document.createTextNode("Seu nome e sobrenome:");
+                nome.appendChild(txtnome);
+                let inputtxtnome= document.createElement("input");
+                inputtxtnome.type = "text";
+                inputtxtnome.id="cdtLogin";
+                inputtxtnome.placeholder="Digite seu nome e sobrenome..."
+
+                nome.appendChild(inputtxtnome);
+
+                let senha2= document.createElement("span");
+                let txtSenha2= document.createTextNode("Confirme sua senha:");
+                senha2.appendChild(txtSenha2);
+
+                let inputsenha2= document.createElement("input");
+                inputsenha2.type = "password";
+                inputsenha2.id="cdtLogin";
+                inputsenha2.placeholder="Digite sua senha novamente..."
+
+                senha2.appendChild(inputsenha2);
+
+                let cpf= document.createElement("span");
+                let txtCpf= document.createTextNode("CPF ou CNPJ:");
+                cpf.appendChild(txtCpf);
+
+                let inputcpf= document.createElement("input");
+                inputcpf.type = "text";
+                inputcpf.id="cdtLogin";
+                inputcpf.placeholder="Digite seu CPF/CNPJ..."
+
+                cpf.appendChild(inputcpf);
+
+                let titulo = document.createElement("span");
+                titulo.classList.add("titulo-login2");
+                let txtTitulo = document.createTextNode("Cadastro");
+                titulo.appendChild(txtTitulo); 
+
+               
+                let login = document.createElement("div");
+                login.classList.add("login");
+
+                let buttonLogin = document.createElement("div");
+                buttonLogin.classList.add("buttonLogin");
+
+                let link = document.createElement("a");
+                link.href= "./pagina-inicial.html";
+
+                let txtLink = document.createTextNode("Cadastrar");
+                link.appendChild(txtLink);
+
+                buttonLogin.appendChild(link);
+
+                login.appendChild(titulo);
+                login.appendChild(nome);
+                login.appendChild(cpf);
+                login.appendChild(email);
+                login.appendChild(senha);
+                login.appendChild(senha2);
+                
+                login.appendChild(buttonLogin);
+                menu.appendChild(login);
+
+                let buttonVoltar = document.createElement("div");
+                buttonVoltar.classList.add("buttonVoltar");
+                let buttonVoltartxt = document.createTextNode("Voltar");
+                buttonVoltar.appendChild(buttonVoltartxt);
+                buttonVoltar.addEventListener("click", function(){
+                    voltar();
+                })
+                
+                login.appendChild(buttonVoltar);
+                
+            }
+
+            function voltar(){
+                menu.innerHTML="";
+                menu.innerHTML="<br><br><br><br><br>"
+                let textoLogin = document.createElement("span");
+                textoLogin.classList.add("ou");
+                let txtLogin= document.createTextNode("Já tem conta? Faça o login!");
+                textoLogin.appendChild(txtLogin);
+
+                let textoCadastro = document.createElement("span");
+                textoCadastro.classList.add("ou");
+                let txtCadastro= document.createTextNode("Não tem conta? Junte-se a nós!");
+                textoCadastro.appendChild(txtCadastro);
+
+                let botLogin = document.createElement("div");
+                botLogin.classList.add("op-login");
+                botLogin.classList.add("botaologin");
+                let txtBotLogin = document.createTextNode("Login");
+                botLogin.appendChild(txtBotLogin);
+
+                let botCadastro = document.createElement("div");
+                botCadastro.classList.add("op-login");
+                botCadastro.classList.add("botaocadastro");
+                let txtBotCadastro = document.createTextNode("Cadastro");
+                botCadastro.appendChild(txtBotCadastro);
+
+                menu.appendChild(textoLogin);
+                menu.appendChild(botLogin);
+                menu.appendChild(textoCadastro);
+                menu.appendChild(botCadastro);
+                clicar();
+                menu.style.height="330px";
+            }
+
+            function clicar(){
+                let botaologin= document.querySelector(".botaologin");
+                let botaocadastro = document.querySelector(".botaocadastro");
+
+                botaologin.addEventListener("click", function(){
+                    menu.innerHTML="";
+                    add_login();
+                })
+                    
+                botaocadastro.addEventListener("click", function(){
+                    menu.style.height="100%";
+                    menu.innerHTML = "";
+                    add_cadastro();
+                })
+           
+            }
+
+            clicar();
+
+
+            
+        </script> 
+
+
 </body>
 </html>
