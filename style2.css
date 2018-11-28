@@ -17,7 +17,7 @@
             display: flex;
             justify-content: center;
             z-index: 1000;
-            
+            /*box-shadow: 0px 10px 20px black;*/
         }
         
         .navegador-superior a{
@@ -55,11 +55,6 @@
             padding-top: 50px;
             text-align: center;
         }
-        .link-evento{
-            color:black;
-            text-decoration: none;
-            display: block;
-        }
 
         .menu ul li a{
             text-decoration: none;
@@ -80,63 +75,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .item-evento{
-            list-style-type: none;
-            display: inline-block;
-            border-radius: 10px;
-            margin: 5px;
-            width: 45%;
-            padding: 5px;
-            font-size:20px;
-            text-align: right;
-            box-shadow: 2px 2px 15px black;
-            position: relative;
-        }
-
-        .img-corrida img{
-            width: 70px;
-            height: 70px;
-            border-radius: 50px;
-            position: absolute;
-            top:5%;
-            left: 5%;
-            box-shadow: 0 0 10px black;
-        }
-
-        .img-perfil-categorias img{
-            width: 50px;
-            height: 50px;
-            border-radius: 50px;
-            position: absolute;
-            top:50%;
-            left: 15%;
-            box-shadow: 2px 2px 10px black;
-
-        }
-        
-
-        .titulo-eventos{
-            font-size: 40px;
-            color: #ffe31d;
-
-        }
-
-        .titulo-categoria{
-            font-size:22px;
-            color: white
-        }
-
-        .lista-eventos{
-            background-color: #1263a2;
-            padding: 20px;
-            width: 80%;
-            font-size: 25px;
-            margin-top: 50px;
-            border-radius: 50px;
-            position: relative;
-            text-align: center;
         }
 
         .titulo-menu img{
@@ -439,9 +377,6 @@
             font-size: 30px;
         }
 
-
-       
-       
         .evento{
             height: 900px;
             display: flex;
@@ -567,34 +502,75 @@
             margin: 30px;
         }
 
-        .lista{
-            background-color: #1263a2;
-            height: 370px;
-            width: 500px;
-            font-size: 25px;
-            margin-top: 50px;
-            border-radius: 50px;
-            position: relative;
+        .ranking-alinhar{
+            display: inline;
         }
 
-        .ranking .lista .texto-sobre{
-            position: absolute;
+        .lista{
+            background-color: #1263a2;
+            border-radius: 50px;
+            font-size: 30px;
+            padding: 20px;
+            margin: 30px;
+        }
+
+        .lista2{
+            width: 500px;
+            font-size: 25px;
+            position: relative;
+            margin: 20px;
+        }
+
+        .ranking .lista2 .texto-sobre{
             font-size: 15px;
             top:50%;
-            transform: translate(0, -50%);
             padding: 30px;
             text-align: justify;
+            padding: 15px;
+        }
+
+        .lista2 h1{
+            text-align: center;
+        }
+
+        .lista2 img{
+            height: 200px;
+            width: 200px;
+            transition: all 2s linear;
+        }
+
+        /*.lista2 hr{
+            border: 1px solid #1263a2;
+        }*/
+
+        .marca-sobre{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+
+        .img-sobre{
+            padding: 30px;
+        }
+
+        .logotipo-img{
+            display: flex;
+            justify-content: center;
+            height: 100px;
+            width: 500px;
         }
 
         .pessoa{
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             background-color: #ff9a06;
             color: white;
             width: 470px;
             padding: 15px;
             border-radius: 50px;
+            font-size: 20px;
         }
 
         .pessoa p{
@@ -611,11 +587,12 @@
 
         .pessoa1{
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             width: 470px;
             padding: 15px;
             color: white;
+            font-size: 15px;
         }
 
         .pessoa1 p{
@@ -648,11 +625,26 @@
 
         .pessoa2{
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             color: white;
             width: 470px;
             padding: 15px;
+            font-size: 15px;
+        }
+
+        .pessoa h1{
+            margin: 10px;
+            font-size: 35px;
+        }
+
+        .pessoa1 h1{
+            margin: 10px;
+            font-size: 25px;
+        }
+
+        .pessoa2 h1{
+            margin: 10px;
             font-size: 20px;
         }
 
@@ -789,17 +781,26 @@
         }
 
         .meus-eventos{
-            background-color: #1263a2;
+            /*background-color: #1263a2;*/
             height: 100%;
             width: 700px;
             margin-top: 50px;
             border-radius: 50px;
             padding: 30px;
-            color: white;
+            /*color: white;*/
         }
         .eventos-titulo{
             font-size: 40px;
             text-align: center;
+        }
+
+        .eventoTitulo a{  
+            text-decoration: none;
+            color: black;
+        }
+
+        .eventoTitulo:hover a{
+            color: white;
         }
 
         .eventos-subtitulo{
@@ -810,6 +811,12 @@
             border-radius: 20px;
             padding: 15px;
             margin: 15px;
+            transition: all 0.2s linear;
+        }
+
+        .meuEvento:hover{
+            padding: 20px;
+            transform: scale(1);
         }
 
         .green{
@@ -854,3 +861,290 @@
         .sc{
             filter: grayscale(100%);
         }
+
+        .container5{
+            height: 100%;
+            width: 100%;
+        }
+
+        .barra-topo{
+            width: 100%;
+            height: 300px;
+            background-color: #ffe31d ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container6{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mapa-evento{
+            /*background-color: #1263a2;*/
+            height: 500px;
+            padding: 20px;
+        }
+
+        .botoes{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            /*background-color: #ff9a06;*/
+            font-size: 30px;
+        }
+
+        .part2{
+            border: 1px solid #1263a2;
+            height: 40px;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .part3{
+            border: 1px solid #1263a2;
+            height: 40px;
+            border-radius: 15px;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .part2 a{
+            text-decoration: none;
+            color: #1263a2;
+        }
+
+        .part3:hover{
+            background-color: #1263a2;
+            color: white;
+            cursor: no-drop; 
+            filter: grayscale(100%);
+        }
+
+        .part2:hover{
+            background-color: #1263a2;
+            color: white;
+            cursor: pointer;
+        }
+
+        .part3 a{
+            text-decoration: none;
+            color: #1263a2;
+        }
+
+        .part3:hover a{
+            background-color: #1263a2;
+            color: white;
+            filter: grayscale(100%);
+            cursor: no-drop; 
+        }
+
+        .part2:hover a{
+            background-color: #1263a2;
+            color: white;
+        }
+
+        .organizador-button{
+            border: 1px solid #1263a2;
+            height: 40px;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 10px;
+        }
+
+        .organizador-button a{
+            text-decoration: none;
+            color: #1263a2; 
+        }
+
+        .organizador-button:hover{
+            background-color: #1263a2;
+            color: white;
+        }
+
+        .organizador-button:hover a{
+            background-color: #1263a2;
+            color: white;
+        }
+
+
+        .foto-evento{
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+            padding: 10px;
+        }
+
+        .foto-evento img{
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+
+        .info-evento{
+            padding: 10px;
+            font-size: 20px;
+        }
+
+        .status{
+            padding: 15px;
+            margin-left: 20px;
+            border-radius: 30px;
+            color: white;
+            background-color: #1263a2;
+            transition: all 0.5s linear;
+        }
+
+        .status:hover{
+            padding: 30px;
+            transform: scale(1);
+        }
+
+        .comentarios-evento{
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .ce{
+            width: 600px;
+            border: none;
+            background-color: rgb(224, 224, 224);
+        }
+
+        .coments-evento{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-coments{
+            background-color: #1263a2;
+            color: white;
+            padding: 10px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .acessorios{
+            background-color: #ff9a06;
+            width: 240px;
+        }
+
+
+        .txtContato{
+            background-color: gray;
+            width: 100px;
+            height: 30px;
+            display: block;
+            margin: 10px;
+            width: 300px;
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+        }
+
+        .txtContatoMaior{
+            background-color: gray;
+            width: 100px;
+            height: 30px;
+            display: block;
+            margin: 10px;
+            width: 300px;
+            height: 200px;
+            border: none;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .lado-esquerdo{
+            padding: 50px;
+            width: 500px;
+        }
+
+        .contact p{
+            font-size: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .contact span{
+            font-size: 15px;
+            margin: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hr-contato{
+            display: flex;
+            justify-content: center;
+        }
+        .hr-contato hr{
+            width: 500px;
+            margin: 20px;
+        }
+
+        .lado-esquerdo form{
+            margin: 20px;
+            border:1px solid #1263a2;
+            border-radius: 20px;
+            width: 342px;
+            padding: 20px;
+        }
+
+        .container7{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lado-direito span{
+            font-size: 15px;
+            margin: 20px;
+        }
+
+        .container8{
+            background-color: #1263a2;
+            margin: 20px;
+        }
+
+        .minha-config{
+            background-color: #1263a2;
+            width: 700px;
+            border-radius: 50px;
+            margin: 30px;
+            padding: 30px;
+        }
+        
+        .texto-config{
+            border: 1px solid #ffe31d;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        #txtBusca3{
+            width: 200px;
+            display: block;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            margin: 10px;
+        }
+
+        .button-config:hover{
+            border: 1px solid #ffe31d;
+            background-color: #ffe31d;
+            color: #1263a2;
+        }
+
+        .button-config{
+            background-color: #1263a2;
+            color: white;
+            border: 1px solid #ffe31d;
+        }
+
