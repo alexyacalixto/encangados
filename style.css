@@ -120,7 +120,12 @@
         .titulo-eventos{
             font-size: 40px;
             color: #ffe31d;
-
+            
+        }
+        .titulo-ranking{
+            font-size: 40px;
+            color: #ffe31d;
+            margin-left:40px;
         }
 
         .titulo-categoria{
@@ -569,7 +574,7 @@
 
         .lista{
             background-color: #1263a2;
-            height: 370px;
+            height: 70vh;
             width: 500px;
             font-size: 25px;
             margin-top: 50px;
