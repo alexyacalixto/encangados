@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" href="marca.png" sizes="20x20" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style2.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <title>Encangados - Crie seu evento!</title>
     
@@ -62,7 +60,7 @@
         <div class="evento">
             <span>Crie seu evento</span>
 
-            <form action="">
+            <form class="formulario">
                 Nome do evento:<br>
                 <input type="text" id="txtBusca2" placeholder="Digite o nome do evento..."><br>
                 Categoria:<br><select name="categoria" id="seletorCategorias">
@@ -100,5 +98,21 @@
             <p>Copyright © 2018 | Encangados</p>
         </div>
 
+    <script>
+        let botaoForm = document.querySelector(".btnBusca");
+        let evento = document.querySelector(".evento");
+        let form = document.querySelector(".formulario");
+        botaoForm.addEventListener("click", function(event){
+            event.preventDefault();
+            evento.innerHTML="";
+            let novo_p = document.createElement("span");
+            novo_p.classList.add(".btnBusca");
+            let texto_p = document.createTextNode("Evento marcado com sucesso!");
+            let novo_br = document.createElement("br");
+            novo_p.appendChild(texto_p);
+            evento.appendChild(novo_p);
+            evento.style.height="75vh";
+        })
+    </script>
 </body>
 </html>
